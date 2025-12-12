@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:.
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=sqlite:///./app.db
+      - SECRET_KEY=dev-secret-key-change-in-production
+      - ALGORITHM=HS256
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=app
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
