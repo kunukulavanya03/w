@@ -6,7 +6,7 @@ Backend API for w
 
 - **Frontend**: React
 - **Backend**: FastAPI + SQLAlchemy
-- **Frontend Source**: GitHub ([Repository](https://github.com/HimaShankarReddyEguturi/Designpythonworldclockui.git))
+- **Frontend Source**: GitHub ([Repository](https://github.com/HimaShankarReddyEguturi/Hotelbookinguidesign.git))
 
 ## Project Structure
 
@@ -43,23 +43,18 @@ cd backend
 
 ## Features
 
-- User registration
-- User login
-- User profile management
-- Password reset
-- Data CRUD operations
+- user authentication
+- item management
 
 ## API Endpoints
 
-- `POST /api/register` - Create a new user account.
-- `POST /api/login` - Log in to an existing user account.
-- `PUT /api/profile` - Update a user's profile information.
-- `POST /api/password_reset` - Reset a user's password.
-- `GET /api/data` - Get all data.
-- `POST /api/data` - Create new data.
-- `GET /api/data/{id}` - Get data by id.
-- `PUT /api/data/{id}` - Update data by id.
-- `DELETE /api/data/{id}` - Delete data by id.
+- `POST /api/register` - Create a new user account
+- `POST /api/login` - Authenticate a user and obtain a JWT token
+- `GET /api/items` - Retrieve a list of all available items
+- `GET /api/items/{item_id}` - Retrieve detailed information about a specific item
+- `POST /api/items` - Create a new item
+- `PUT /api/items/{item_id}` - Update an existing item
+- `DELETE /api/items/{item_id}` - Delete an item
 
 ## License
 
